@@ -13,7 +13,23 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      appBar: AppBar(
+        title: const Text("photo editor", style: TextStyle(color: Colors.white)),
+        leading: CloseButton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed('/');
+          },
+        ),
+        actions: [
+          TextButton(
+            onPressed: (){}, 
+            child: const Text('保存', style: TextStyle(color: Colors.white, fontSize: 15.0),),
+            
+          )
+        ],
+      ),
+
       body: Center(
         child: Consumer<AppImageProvider>(
           builder: (BuildContext context, value, Widget? child){
@@ -26,6 +42,48 @@ class _HomeScreenState extends State<HomeScreen> {
             }
           }
         ),
+      ),
+
+      bottomNavigationBar: Container(
+        width: double.infinity,
+        height: 96.0,
+        color: Colors.black,
+        child: SafeArea(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+              _bottomBatItem(Icons.crop_rotate, '裁剪', onPressed: (){
+                Navigator.of(context).pushNamed('/crop');
+
+              }),
+              // _bottomBatItem(),
+              // _bottomBatItem(),
+              // _bottomBatItem(),
+              // _bottomBatItem(),
+              // _bottomBatItem(),
+              // _bottomBatItem(),
+            ],),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomBatItem(IconData icon, String title, {required onPressed}) {
+    return InkWell(
+      onTap: onPressed,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, color: Colors.white,),
+            const SizedBox(height: 4.0),
+            Text(title, style: const TextStyle(color: Colors.white, fontSize: 13.0),)
+          ],
+        ),
+      
       ),
     );
   }
