@@ -52,7 +52,7 @@ class _StartScrennState extends State<StartScrenn> {
                         onPressed: (){
                           APPImagePicker(source: ImageSource.gallery)
                           .pick(onPick: (File? image) {
-                            imageProvider.changeImage(image);
+                            imageProvider.changeImageFile(image);
                             Navigator.of(context).pushReplacementNamed('/home');
                           });
                         },
@@ -63,7 +63,7 @@ class _StartScrennState extends State<StartScrenn> {
                           APPImagePicker(source: ImageSource.camera)
                           .pick(onPick: (File? image) {
                             // print('[ImagePicker] picked image: ${image!.path}');
-                            imageProvider.changeImage(image);
+                            imageProvider.changeImageFile(image);
                             Navigator.of(context).pushReplacementNamed('/home');
                           });
                         },

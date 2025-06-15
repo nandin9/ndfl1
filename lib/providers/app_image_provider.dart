@@ -7,7 +7,12 @@ class AppImageProvider extends ChangeNotifier{
   
   Uint8List? currentImage;
   
-  changeImage(File? image) {
+  changeImage(Uint8List image) {
+    currentImage = image;
+    notifyListeners();
+  }
+
+  changeImageFile(File? image) {
     currentImage = image?.readAsBytesSync();
     notifyListeners();
   }
