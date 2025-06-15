@@ -38,7 +38,6 @@ class MainApp extends StatelessWidget {
         '/crop' : (_) => const CropScreen(),
       },
       initialRoute: '/',
-      // home: const StartScrenn()
     );
   }
 }
