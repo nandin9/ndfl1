@@ -57,6 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.of(context).pushNamed('/crop');
 
               }),
+              _bottomBatItem(Icons.filter_vintage_outlined, '滤镜', onPressed: (){
+                Navigator.of(context).pushNamed('/filter');
+              }),
               // _bottomBatItem(),
               // _bottomBatItem(),
               // _bottomBatItem(),
