@@ -55,10 +55,12 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
               _bottomBatItem(Icons.crop_rotate, '裁剪', onPressed: (){
                 Navigator.of(context).pushNamed('/crop');
-
               }),
               _bottomBatItem(Icons.filter_vintage_outlined, '滤镜', onPressed: (){
                 Navigator.of(context).pushNamed('/filter');
+              }),
+              _bottomBatItem(Icons.tune, '调节', onPressed: (){
+                Navigator.of(context).pushNamed('/adjust');
               }),
               // _bottomBatItem(),
               // _bottomBatItem(),

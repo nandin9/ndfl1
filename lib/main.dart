@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ndfl/providers/app_image_provider.dart';
+import 'package:ndfl/screens/adjust_screen.dart';
 import 'package:ndfl/screens/crop_screen.dart';
 import 'package:ndfl/screens/filter_screen.dart';
 import 'package:ndfl/screens/home_screen.dart';
@@ -31,6 +32,9 @@ class MainApp extends StatelessWidget {
           elevation: 0,
           color: Colors.black,
           centerTitle: true,
+        ),
+        sliderTheme: const SliderThemeData(
+          showValueIndicator: ShowValueIndicator.always
         )
       ),
       routes: <String, WidgetBuilder> {
@@ -38,6 +42,7 @@ class MainApp extends StatelessWidget {
         '/home' : (_) => const HomeScreen(),
         '/crop' : (_) => const CropScreen(),
         '/filter' : (_) => const FilterScreen(),
+        '/adjust' : (_) => const AdjustScreen(),
       },
       initialRoute: '/',
     );
