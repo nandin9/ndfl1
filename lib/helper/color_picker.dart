@@ -24,25 +24,6 @@ class AppColorPicker {
                     tempColor = changeColor;
                   },
                 ),
-                // Use Material color picker:
-                //
-                // child: MaterialPicker(
-                //   pickerColor: pickerColor,
-                //   onColorChanged: changeColor,
-                //   showLabel: true, // only on portrait mode
-                // ),
-                //
-                // Use Block color picker:
-                //
-                // child: BlockPicker(
-                //   pickerColor: currentColor,
-                //   onColorChanged: changeColor,
-                // ),
-                //
-                // child: MultipleChoiceBlockPicker(
-                //   pickerColors: currentColors,
-                //   onColorsChanged: changeColors,
-                // ),
               ),
               actions: <Widget>[
                 ElevatedButton(

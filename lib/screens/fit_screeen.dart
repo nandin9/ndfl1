@@ -281,13 +281,8 @@ class _FitScreeenState extends State<FitScreeen> {
               onPressed: (){
                 APPImagePicker(source: ImageSource.gallery)
                   .pick(onPick: (File? image) async {
-                    // setState(() {
                       backGroundImage = await image!.readAsBytes();
                       setState(() {});
-                    // });
-                    // print('[ImagePicker] picked image: ${image!.path}');
-                    // imageProvider.changeImageFile(image);
-                    // Navigator.of(context).pushReplacementNamed('/home');
                   });
               }, 
               icon: const Icon(Icons.photo_library_outlined, color: Colors.white)
@@ -383,8 +378,6 @@ class _FitScreeenState extends State<FitScreeen> {
                         ),
                       ),
                     ),
-                    // const SizedBox(height: 4), 
-                    // Text(texture.name!, style: const TextStyle(color: Colors.white, fontSize: 12))
                   ],
                 ),
               );
