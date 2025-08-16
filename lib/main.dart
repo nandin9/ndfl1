@@ -3,6 +3,7 @@ import 'package:ndfl/providers/app_image_provider.dart';
 import 'package:ndfl/screens/adjust_screen.dart';
 import 'package:ndfl/screens/crop_screen.dart';
 import 'package:ndfl/screens/filter_screen.dart';
+import 'package:ndfl/screens/fit_screeen.dart';
 import 'package:ndfl/screens/home_screen.dart';
 import 'package:ndfl/screens/start_screnn.dart';
 import 'package:provider/provider.dart';
@@ -43,6 +44,7 @@ class MainApp extends StatelessWidget {
         '/crop' : (_) => const CropScreen(),
         '/filter' : (_) => const FilterScreen(),
         '/adjust' : (_) => const AdjustScreen(),
+        '/fit' : (_) => const FitScreeen(),
       },
       initialRoute: '/',
     );

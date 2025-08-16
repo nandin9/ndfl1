@@ -62,12 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
               _bottomBatItem(Icons.tune, '调节', onPressed: (){
                 Navigator.of(context).pushNamed('/adjust');
               }),
-              // _bottomBatItem(),
-              // _bottomBatItem(),
-              // _bottomBatItem(),
-              // _bottomBatItem(),
-              // _bottomBatItem(),
-              // _bottomBatItem(),
+              _bottomBatItem(Icons.fit_screen_sharp, 'Fit', onPressed: (){
+                Navigator.of(context).pushNamed('/fit');
+              }),
             ],),
           ),
         ),

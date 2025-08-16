@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:colorfilter_generator/addons.dart';
 import 'package:colorfilter_generator/colorfilter_generator.dart';
 import 'package:flutter/material.dart';
@@ -80,11 +82,11 @@ class _AdjustScreenState extends State<AdjustScreen> {
           IconButton(
             color: Colors.white,
             onPressed: () async{
-              // Uint8List? bitmap = await controller.capture();
-              // imageProvider.changeImage(bitmap!);
-              // if (!mounted) return;
-              // // ignore: use_build_context_synchronously
-              // Navigator.of(context).pop();
+              Uint8List? bitmap = await screenshotController.capture();
+              imageProvider.changeImage(bitmap!);
+              if (!mounted) return;
+              // ignore: use_build_context_synchronously
+              Navigator.of(context).pop();
           }, icon: const Icon(Icons.done))
         ],
       ),
@@ -261,7 +263,7 @@ class _AdjustScreenState extends State<AdjustScreen> {
 
   Widget slider({label, value, onChanged}) {
     return Slider(
-      label: '${value.toString()}',
+      label: '${value.toStringAsFixed(2)}',
       value: value,
       max: 1,
       min: -1,
