@@ -6,6 +6,7 @@ import 'package:ndfl/screens/filter_screen.dart';
 import 'package:ndfl/screens/fit_screeen.dart';
 import 'package:ndfl/screens/home_screen.dart';
 import 'package:ndfl/screens/start_screnn.dart';
+import 'package:ndfl/screens/tint_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -45,6 +46,7 @@ class MainApp extends StatelessWidget {
         '/filter' : (_) => const FilterScreen(),
         '/adjust' : (_) => const AdjustScreen(),
         '/fit' : (_) => const FitScreeen(),
+        '/tint' : (_) => const TintScreen(),
       },
       initialRoute: '/',
     );
