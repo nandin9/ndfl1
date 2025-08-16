@@ -23,7 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           TextButton(
-            onPressed: (){}, 
+            onPressed: (){
+              
+            }, 
             child: const Text('保存', style: TextStyle(color: Colors.white, fontSize: 15.0),),
             
           )
@@ -67,6 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
               }),
               _bottomBatItem(Icons.border_color, '叠加', onPressed: (){
                 Navigator.of(context).pushNamed('/tint');
+              }),
+              _bottomBatItem(Icons.blur_circular, '模糊', onPressed: (){
+                Navigator.of(context).pushNamed('/blur');
               }),
             ],),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ndfl/providers/app_image_provider.dart';
 import 'package:ndfl/screens/adjust_screen.dart';
+import 'package:ndfl/screens/blur_screen.dart';
 import 'package:ndfl/screens/crop_screen.dart';
 import 'package:ndfl/screens/filter_screen.dart';
 import 'package:ndfl/screens/fit_screeen.dart';
@@ -47,6 +48,7 @@ class MainApp extends StatelessWidget {
         '/adjust' : (_) => const AdjustScreen(),
         '/fit' : (_) => const FitScreeen(),
         '/tint' : (_) => const TintScreen(),
+        '/blur' : (_) => const BlurScreen(),
       },
       initialRoute: '/',
     );
