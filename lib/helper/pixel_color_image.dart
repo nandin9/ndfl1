@@ -6,11 +6,11 @@ import 'package:pixel_color_picker/pixel_color_picker.dart';
 
 class PixelColorImage {
   
-  show(BuildContext context, {Color? backGroundColor, Uint8List? image, onPick}) {
+  show(BuildContext context, {Color? backGroundColor, Uint8List? image, onPick, required Color backgroundColor}) {
     return showDialog(
       context: context, 
       builder: (BuildContext context) {
-        Color tempColor = backGroundColor!;
+        Color tempColor = backGroundColor ?? Colors.white;
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(

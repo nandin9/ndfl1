@@ -6,11 +6,11 @@ import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class AppColorPicker {
   
-  show(BuildContext context, {Color? backGroundColor, Uint8List? image, onPick}) {
+  show(BuildContext context, {Color? backGroundColor, Uint8List? image, onPick, required Color backgroundColor, bool alpha = true}) {
     return showDialog(
       context: context, 
       builder: (BuildContext context) {
-        Color tempColor = backGroundColor!;
+        Color tempColor = backGroundColor ?? Colors.white;
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
@@ -19,7 +19,7 @@ class AppColorPicker {
                 child: ColorPicker(
                   enableAlpha: false,
                   hexInputBar: true,
-                  pickerColor: backGroundColor,
+                  pickerColor: backGroundColor ?? Colors.white,
                   onColorChanged: (changeColor){
                     tempColor = changeColor;
                   },

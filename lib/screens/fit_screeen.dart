@@ -317,7 +317,7 @@ class _FitScreeenState extends State<FitScreeen> {
               onPressed: (){
                 AppColorPicker().show(
                   context,
-                  backGroundColor: backGroundColor,
+                  backgroundColor: backGroundColor,
                   onPick: (color) {
                     setState(() {
                       backGroundColor = color;
@@ -331,7 +331,7 @@ class _FitScreeenState extends State<FitScreeen> {
               onPressed: (){
                 PixelColorImage().show(
                   context,
-                  backGroundColor: backGroundColor,
+                  backgroundColor: backGroundColor,
                   image: backGroundImage,
                   onPick: (color) {
                     setState(() {

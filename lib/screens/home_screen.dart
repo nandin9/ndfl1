@@ -73,6 +73,15 @@ class _HomeScreenState extends State<HomeScreen> {
               _bottomBatItem(Icons.blur_circular, '模糊', onPressed: (){
                 Navigator.of(context).pushNamed('/blur');
               }),
+              _bottomBatItem(Icons.text_fields, '文字', onPressed: (){
+                Navigator.of(context).pushNamed('/text');
+              }),
+              _bottomBatItem(Icons.emoji_emotions_outlined, '贴纸', onPressed: (){
+                Navigator.of(context).pushNamed('/stick');
+              }),
+              _bottomBatItem(Icons.draw, '画笔', onPressed: () {
+                Navigator.of(context).pushNamed('/draw');
+              }),
             ],),
           ),
         ),

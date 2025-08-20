@@ -3,10 +3,12 @@ import 'package:ndfl/providers/app_image_provider.dart';
 import 'package:ndfl/screens/adjust_screen.dart';
 import 'package:ndfl/screens/blur_screen.dart';
 import 'package:ndfl/screens/crop_screen.dart';
+import 'package:ndfl/screens/draw_screens.dart';
 import 'package:ndfl/screens/filter_screen.dart';
 import 'package:ndfl/screens/fit_screeen.dart';
 import 'package:ndfl/screens/home_screen.dart';
 import 'package:ndfl/screens/start_screnn.dart';
+import 'package:ndfl/screens/text_screen.dart';
 import 'package:ndfl/screens/tint_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -28,6 +30,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ndfl',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF111111),
         primaryColor: Colors.blue,
@@ -49,6 +52,8 @@ class MainApp extends StatelessWidget {
         '/fit' : (_) => const FitScreeen(),
         '/tint' : (_) => const TintScreen(),
         '/blur' : (_) => const BlurScreen(),
+        '/text' : (_) => const TextScreen(),
+        '/draw' : (_) => const DrawScreen(),
       },
       initialRoute: '/',
     );
